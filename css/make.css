@@ -36,7 +36,7 @@ nav a {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.8);
@@ -54,12 +54,13 @@ nav a {
 .upload-container {
     display: flex;
     justify-content: center;
+    padding: 15px;
     margin-bottom: 20px;
 }
 
 .upload-box {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background: #eee;
     border: 2px dashed #ccc;
     display: flex;
@@ -70,7 +71,7 @@ nav a {
 
 
 .upload-box img {
-    width: 20px;
+    width:  20px;
     height: 20px;
 }
 
@@ -82,102 +83,51 @@ nav a {
     cursor: pointer;
 }
 
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 20px;
+}
 
-.upload-btn > a {
-    text-decoration: none;
-    color: #fff;
+.filter-item {
+    width: 150px;
+    text-align: center;
+}
+
+.filter-item img {
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .upload-btn {
     padding: 10px 20px;
     background: #333;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.filter-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.upload-box img {
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-}
-
-.upload-box input {
-    position: absolute;
-    width: 100px;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-
-.slider{   
-    
-    padding: 30px;
-}
-
-input[type="range"] {
-    width: 600px;
-
-}
-
-.styled-range{
-    -webkit-appearance: none;
-    height: 10px;
-    background: #ddd; /* 기본 배경색 */
-    outline: none;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-}
-
-.styled-range::-webkit-slider-runnable-track {
-    height: 10px;
-    cursor: pointer;
-    background: #ddd; /* 트랙 색상 */
-    border-radius: 5px;
-    border: 1px solid #000;
-}
-
-.styled-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: none; /* 핸들 색상 */
-    cursor: pointer;
-    border-radius: 50%;
-    border: 2px solid #333;
-    margin-top: -5px; /* 핸들이 트랙과 수평이 되도록 조정 */
-}
-
 
 @media (max-width: 800px) {
-    .styled-range::-webkit-slider-runnable-track {
-        height: 6px;
-        cursor: pointer;
-        background: #ddd; /* 트랙 색상 */
-        border-radius: 5px;
-        border: 1px solid #000;
-    }
-    .styled-range::-webkit-slider-thumb {
-        width: 15px;
-        height: 15px;
-    }
-  
-    .slider{
-        padding: 40px;
+    .filters {
+        flex-direction: row;
+        align-items: center;
     }
 
-    input[type="range"] {
-        width: 250px;
+    
+
+    .filter-item {
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        
     }
 
     .upload-box {
@@ -198,34 +148,21 @@ input[type="range"] {
 
     .container {    
         background: rgba(255, 255, 255, 0.8);
-        width: 350px;
+        width: 400px;
     }
-    .title-input {
-        width: 95%;
-    }
-}
+} 
 
     @media (min-width: 801px) and (max-width: 1300px) {
-      
         .container {
-            max-width: 720px;
-            margin: 200px auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.8);
-            text-align: center;
+            margin: 120px auto;
+            width: 700px;
         }
-        .filter-section {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
+    
+        .filter-item {
             gap: 20px;
-            margin-bottom: 20px;
-        
+            width: 25%;
         }
-        .slider{
-            padding: 40px;
-        }
-
+    
         .upload-box {
             width: 400px;
             height: 400px;
@@ -239,8 +176,6 @@ input[type="range"] {
         .title-input {
             width: 90%;
         }
-   
     }
-
 
 

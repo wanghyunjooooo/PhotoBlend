@@ -7,53 +7,47 @@
     <link rel="stylesheet" href="css/filter.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <span class="logo"><a href="phtoblend.html">PhotoBlend</span></a>
-            <nav>
-                <a href="#">filter</a>
-                <a href="gallery.html">gallery</a>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <input type="text" placeholder="사진의 제목을 입력하세요." class="title-input">
-            <div class="upload-container">
-                <div class="upload-box">
-                    <input type="file" id="fileUpload">
-                    <img src="image/업로드 아이콘.png" alt="Upload">
-                </div>
+        <header>
+            <div class="header-container">
+                <span class="logo"><a href="phtoblend.html">PhotoBlend</span></a>
+                <nav>
+                    <a href="filter.html">filter</a>
+                    <a href="gallery.html">gallery</a>
+                </nav>
             </div>
-            <div class="filters">
-                <div class="filter-item">
-                    <img src="image/필터사진2.jpg" alt="normal">
-                    <span>normal</span>
+        </header>
+        <main>
+            <div class="container">
+                <input type="text" placeholder="필터의 제목을 입력하세요." class="title-input">
+                <div class="upload-container">
+                    <div class="upload-box">
+                        <input type="file" id="fileUpload">
+                        <img id"uploadImage" src="image/업로드 아이콘.png" alt="Upload">
+                    </div>
                 </div>
-                <div class="filter-item">
-                    <img src="image/필터사진2.jpg" alt="white">
-                    <span>white</span>
+            <div class="filter-section">
+                <div class="slider">
+                    <label>밝기</label>
+                    <input type="range" class="styled-range" min="0" max="100" value="50">
                 </div>
-                <div class="filter-item">
-                    <img src="image/필터사진2.jpg" alt="pink">
-                    <span>pink</span>
+                <div class="slider">
+                    <label>노출</label>
+                    <input type="range" class="styled-range" min="0" max="100" value="50">
                 </div>
-                <div class="filter-item">
-                    <img src="image/필터사진2.jpg" alt="cr1">
-                    <span>cr1</span>
+                <div class="slider">
+                    <label>강조</label>
+                    <input type="range" class="styled-range" min="0" max="100" value="50">
                 </div>
-                <div class="filter-item">
-                    <img src="image/필터사진2.jpg" alt="cr2">
-                    <span>cr2</span>
+                <div class="slider">
+                    <label>가장자리</label>
+                    <input type="range" class="styled-range" min="0" max="100" value="50">
                 </div>
-                <div class="filter-item">
-                    <img src="image/필터사진2.jpg" alt="dark">
-                    <span>dark</span>
-                </div>
-            </div>
-            <button class="upload-btn">upload</button>
-        </div>
-    </main>
-    <script src="js/filer.js"></script>
+             </div>   
+                <button class="upload-btn"><a href="make.html">make</a></button>
+            
+            </div> 
+        </main>
+        <script src="js/filer.js"></script>
+    </div>
 </body>
 </html>
