@@ -16,14 +16,16 @@ a{
     text-decoration: none;
     color: black;
 }
-
-
 .header-container { 
+        
     display: flex;
     justify-content: space-between;
     padding: 20px;
     background: rgba(255, 255, 255, 0.7);
+
 }
+
+
 
 .logo {
     font-size: 24px;
@@ -41,18 +43,22 @@ nav a {
     flex-direction: column;
     align-items: center;
 }
-#first, #second {
+#first, #second{
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
 #first{
-    width: 50%;
+    width: 55%;
 }
 
 #second{
-    width: 80%;
+    width: 55%;
+}
+
+#sohi{
+    width: 30%;
 }
 
 
@@ -84,10 +90,58 @@ nav a {
     transform: rotate(-7deg); /* 다섯 번째 이미지 각도 */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
+        #first{
+            width: 75%;
+        }
 
+        #second{
+            width: 75%;
+        }
+        #first, #second {
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-item {
+            margin: 5px 0;
+        }
+
+        #sohi{
+            width: 75%;
+        }
+   
 }
 
-@media (min-width: 801px) and (max-width: 1300px) {
+@media (min-width: 751px) and (max-width: 1300px) {
+  
+    #main-content {
+     margin: 40px;
+     
+    }
 
+    #first{
+        width: 95%;
+        flex-wrap: nowrap;
+    }
+    
+    #second{
+        width: 105%;
+        flex-wrap: nowrap;
+    }
+   
+    #first, #second {
+        padding: 20px;
+        margin: 20px;
+    }
+   
+    .main-item {
+        padding: 30px;
+        flex: 1 0 45%; /* 아이템이 두 개씩 들어가도록 설정 */
+        margin: 0 5px;
+    }
+
+    #sohi{
+        width: 50%;
+    }
+   
 }
