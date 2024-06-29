@@ -39,21 +39,25 @@ document.getElementById('uploadButton').addEventListener('click', function() {
     });
 });
 
-// make.js
 
-document.addEventListener('DOMContentLoaded', function() {
-    const filterItems = document.querySelectorAll('.filter-item');
 
-    filterItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // 모든 필터 아이템에서 'clicked' 클래스를 제거합니다.
-            filterItems.forEach(i => i.classList.remove('clicked'));
-            
-            // 클릭한 아이템에 'clicked' 클래스를 추가합니다.
-            this.classList.add('clicked');
-        });
-    });
-});
+function showUploadMessage() {
+    // Create elements for popup
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
 
+    const popup = document.createElement('div');
+    popup.classList.add('popup');
+    popup.innerText = "Uploaded!";
+
+    // Append popup to overlay and then to the body
+    overlay.appendChild(popup);
+    document.body.appendChild(overlay);
+
+    // Optional: Remove popup and overlay after some time
+    setTimeout(() => {
+        overlay.remove();
+    }, 500); // Remove after 2 seconds (adjust as needed)
+}
 
 
