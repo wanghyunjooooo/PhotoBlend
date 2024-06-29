@@ -64,32 +64,20 @@ nav a {
 }
 
 .hero-content {
-    background: rgba(255, 255, 255, 0.553);
-    padding: 80px;
-    border-radius: 10px;
-}
-.hero-content {
     background: none;
     padding: 80px;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out; /* 추가된 부분 */
 }
-
-.hero-content:hover {
-    transform: scale(1.05); /* 추가된 부분 */
-}
-
-
-.hero-content:hover h1 {
-    transform: scale(1.1); /* 추가된 부분 */
-}
-
 
 .hero h1 {
     color: #fff;
-    font-size: 50px;
+    font-size: 65px;
     text-align: center;
-    transition: transform 0.3s ease-in-out; /* 추가된 부분 */
+    transition: tra nsform 0.3s ease-in-out; /* 추가된 부분 */
+}
+
+.hero-content:hover h1 {
+    transform: scale(1.2); /* 추가된 부분 */
 }
 
 .gallery {
@@ -112,11 +100,12 @@ nav a {
 
 @media (max-width: 770px) {
     .hero-content {
-        width: 90%;
+        width: 100%;
+        padding: 0px;
     }
 
     .hero h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .gallery-container img {
@@ -126,11 +115,12 @@ nav a {
 
 @media (min-width: 771px) and (max-width: 1024px) {
     .hero-content {
+        padding: 0;
         width: 70%;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 40px;
     }
 
     .gallery-container img {

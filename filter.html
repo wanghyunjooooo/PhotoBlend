@@ -6,48 +6,50 @@
     <title>PhotoBlend</title>
     <link rel="stylesheet" href="css/filter.css">
 </head>
-<body>
-        <header>
-            <div class="header-container">
-                <span class="logo"><a href="phtoblend.html">PhotoBlend</span></a>
-                <nav>
-                    <a href="filter.html">filter</a>
-                    <a href="gallery.html">gallery</a>
-                </nav>
-            </div>
-        </header>
+<body>  
+            <header>
+                <div class="header-container">
+                    <span class="logo"><a href="phtoblend.html">PhotoBlend</span></a>
+                    <nav>
+                        <a href="filter.html">filter</a>
+                        <a href="gallery.html">gallery</a>
+                    </nav>
+                </div>
+            </header>
         <main>
             <div class="container">
-                <input type="text" placeholder="필터의 제목을 입력하세요." class="title-input">
+                <input type="text" placeholder="필터의 제목을 입력하세요." class="title-input" >
                 <div class="upload-container">
-                    <div class="upload-box">
-                        <input type="file" id="fileUpload">
-                        <img id"uploadImage" src="image/업로드 아이콘.png" alt="Upload">
+                    <div class="upload-box" id="uploadIcon">
+                        <input type="file" id="fileUpload" accept="image/*">
+                        <img src="image/업로드 아이콘.png" alt="Upload" class="hover-img" id="uploadIcon">
                     </div>
+                    <img id="preview" src="#" alt="Image Preview">
                 </div>
-            <div class="filter-section">
-                <div class="slider">
-                    <label>밝기</label>
-                    <input type="range" class="styled-range" min="0" max="100" value="50">
-                </div>
-                <div class="slider">
-                    <label>노출</label>
-                    <input type="range" class="styled-range" min="0" max="100" value="50">
-                </div>
-                <div class="slider">
-                    <label>강조</label>
-                    <input type="range" class="styled-range" min="0" max="100" value="50">
-                </div>
-                <div class="slider">
-                    <label>가장자리</label>
-                    <input type="range" class="styled-range" min="0" max="100" value="50">
-                </div>
-             </div>   
-                <button class="upload-btn"><a href="make.html">make</a></button>
-            
-            </div> 
-        </main>
+                <div class="filter-section">
+                    <div class="slider">
+                        <label>밝기</label>
+                        <input type="range" class="styled-range" id="brightnessRange" min="0" max="100" value="50">
+                    </div>
+                    <div class="slider">
+                        <label>노출</label>
+                        <input type="range" class="styled-range" id="exposureRange" min="0" max="100" value="50">
+                    </div>
+                    <div class="slider">
+                        <label>강조</label>
+                        <input type="range" class="styled-range" id="contrastRange" min="0" max="100" value="50">
+                    </div>
+                    <div class="slider">
+                        <label>가장자리</label>
+                        <input type="range" class="styled-range" id="saturateRange" min="0" max="100" value="50">
+                    </div>
+                </div>   
+                    <button class="upload-btn"><a href="make.html">make</a></button>
+                
+                </div> 
+            </main>
         <script src="js/filer.js"></script>
+
     </div>
 </body>
 </html>

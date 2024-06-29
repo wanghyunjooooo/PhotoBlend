@@ -17,7 +17,8 @@ a{
     color: black;
 }
 
-.header-container {
+
+.header-container { 
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -112,12 +113,59 @@ nav a {
 }
 
 /* 마우스 오버 시 이미지 확대 */
-.hover-img:hover {
-    transform: scale(1.1); /* 10% 확대 */
+
+.filter-item:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.filter-item:hover {
+    transform: scale(1.2); /* 10% 확대 */
+}
+
+.filter-item.clicked {
+transform: scale(1.05); /* 추가된 부분 */
 }
 
 
-@media (max-width: 800px) {
+
+#filter-img{
+    cursor: pointer; /* 마우스를 올리면 클릭 가능하다는 것을 보여줍니다 */
+    transition: transform 0.3s ease; /* 부드러운 확대/축소 애니메이션을 위해 추가합니다 */
+}
+
+.enlarged {
+    transform: scale(2); /* 이미지를 2배로 확대합니다 */
+}
+
+.filter-item img.enlarged {
+    transform: scale(1.5);
+}
+
+
+#preview {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+
+.upload-box input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+@media (max-width: 750px) {
     .filters {
         flex-direction: row;
         align-items: center;
@@ -153,11 +201,11 @@ nav a {
 
     .container {    
         background: rgba(255, 255, 255, 0.8);
-        width: 400px;
+        width: 350px;
     }
 } 
 
-    @media (min-width: 801px) and (max-width: 1300px) {
+    @media (min-width: 751px) and (max-width: 1300px) {
         .container {
             margin: 120px auto;
             width: 700px;
